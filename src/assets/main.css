@@ -1,5 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #1F4D3F;
+  --color-secondary: #F4A7B9;
+  --color-accent: #8BA888;
+  --color-background-light: #FDF9ED;
+  --color-background-dark: #121212;
+  
+  --font-display: 'Quicksand', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  
+  --radius-default: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  
+  --color-background: var(--color-background-light);
+  --color-text: #1f2937; 
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
 }
