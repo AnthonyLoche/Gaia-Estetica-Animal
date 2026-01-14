@@ -19,7 +19,7 @@ const handleContact = (url) => {
                 <h1 class="title">
                     <div>Gaia Estética</div>
                     <div>Animal - Onde </div>
-                    <div style="display: flex; gap: 0.75rem;">seu pet é <div class="marked">família</div>
+                    <div class="align">seu pet é <div class="marked">família</div>
                     </div>
                 </h1>
             </div>
@@ -56,6 +56,10 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.align{
+    display: flex; gap: 0.75rem;
 }
 
 img.circle {
@@ -178,8 +182,40 @@ img.circle {
 
 @media screen and (max-width:1024px) {
     .title{
-        font-size: 3.5rem;
+        font-size: 3rem;
+        word-spacing: 10px;
     }
 
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+}
+
+    .subtitle {
+        width: 100%;
+    }
+
+    button{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .align{
+        display: grid;
+    }
+
+    .marked{
+    margin-top: -12px;
+    }
+
+    .text{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        text-align: center;
+        align-items: center;
+    }
 }
 </style>
