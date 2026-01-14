@@ -95,13 +95,13 @@ onUnmounted(stopAutoPlay);
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: visible; /* 🔥 IMPORTANTE */
+  overflow: visible; 
 }
 
 .carousel__container {
   width: 100%;
   height: 100%;
-  overflow: hidden; /* controla o corte corretamente */
+  overflow: hidden; 
 }
 
 .carousel__track {
@@ -178,9 +178,15 @@ onUnmounted(stopAutoPlay);
   background: var(--color-secondary);
 }
 
-@media (max-width: 768px) {
-  .carousel__slide {
-    padding: 20px;
+/* MOBILE */
+@media (max-width: 1024px) {
+  .carousel {
+    min-height: 350px;
+  }
+
+  .carousel__image {
+    min-height: 300px;
+    transform: rotate(3deg);
   }
 }
 </style>

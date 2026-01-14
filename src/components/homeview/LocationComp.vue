@@ -240,6 +240,12 @@ span {
     box-shadow: 0 4px 12px rgba(45, 85, 80, 0.3);
 }
 
+@media screen and (max-width: 1024px) {
+    .map-container {
+    height: 400px;
+}
+}
+
 @media (max-width: 968px) {
     .location-section {
         grid-template-columns: 1fr;

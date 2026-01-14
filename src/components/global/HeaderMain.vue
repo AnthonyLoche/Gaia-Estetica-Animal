@@ -94,7 +94,7 @@ onUnmounted(() => {
                             </router-link>
                         </li>
                         <li class="header__mobile-item">
-                            <router-link to="/about" class="header__mobile-link" @click="closeMobileMenu">
+                            <router-link to="/about-us" class="header__mobile-link" @click="closeMobileMenu">
                                 Sobre
                             </router-link>
                         </li>
@@ -168,9 +168,6 @@ onUnmounted(() => {
     border-radius: 50%;
 }
 
-.header__logo-text {
-    display: none;
-}
 
 @media (min-width: 768px) {
     .header__logo-text {

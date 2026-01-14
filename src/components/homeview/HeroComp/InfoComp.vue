@@ -45,7 +45,7 @@ const handleContact = (url) => {
                 <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="" class="circle">
                 
                 </div>
-                <p style="margin-left: 1rem;">+Mais de <strong>500 pets</strong> felizes atendidos</p>
+                <p style="margin-left: 1rem;">+Mais de <strong>500 pets</strong> atendidos</p>
             </div>
         </div>
     </article>
@@ -174,5 +174,12 @@ img.circle {
     color: #555555;
     font-size: 1.25rem;
     width: 80%;
+}
+
+@media screen and (max-width:1024px) {
+    .title{
+        font-size: 3.5rem;
+    }
+
 }
 </style>

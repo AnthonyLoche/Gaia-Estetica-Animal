@@ -92,4 +92,24 @@ span {
     color: #555555;
     width: 80%;
 }
+
+@media screen and (max-width:1024px) {
+    .container{
+     flex-direction: column;
+     height: auto;
+    }
+    
+    .item {
+     justify-content: center;
+    }
+    
+    .desc {
+     width: 100%;
+    }
+
+    .stacks {
+     height: auto;
+     padding: 2rem 0;
+    }
+}
 </style>

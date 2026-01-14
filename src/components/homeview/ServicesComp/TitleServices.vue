@@ -23,4 +23,14 @@
         font-size: 1.2rem;
         color: var(--color-text-secondary);
     }
+
+    @media screen and (max-width: 1024px) {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
 </style>

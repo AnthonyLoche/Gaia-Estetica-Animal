@@ -90,7 +90,6 @@ const services = [
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(to bottom, rgba(253, 249, 237, 0.9), transparent);
   z-index: 1;
 }
 
