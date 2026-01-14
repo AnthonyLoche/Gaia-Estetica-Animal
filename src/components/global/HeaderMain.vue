@@ -1,5 +1,5 @@
 <script setup>
-import CalendarBlankOutline from "vue-material-design-icons/CalendarBlankOutline.vue";
+import CalendarMonth from "vue-material-design-icons/CalendarMonth.vue";
 import MenuIcon from "vue-material-design-icons/Menu.vue";
 import CloseIcon from "vue-material-design-icons/Close.vue";
 import { ref, onMounted, onUnmounted } from "vue";
@@ -68,7 +68,7 @@ onUnmounted(() => {
                 </nav>
 
                 <button class="header__cta" aria-label="Agendar atendimento">
-                    <CalendarBlankOutline class="header__cta-icon" :size="20" />
+                    <CalendarMonth class="header__cta-icon" :size="20" />
                     <span class="header__cta-text">Agendar Atendimento</span>
                 </button>
             </div>
@@ -106,7 +106,7 @@ onUnmounted(() => {
                         </li>
                     </ul>
                     <button class="header__mobile-cta" @click="closeMobileMenu">
-                        <CalendarBlankOutline class="header__mobile-cta-icon" :size="24" />
+                        <CalendarMonth class="header__mobile-cta-icon" :size="24" />
                         <span>Agendar Atendimento</span>
                     </button>
                 </div>
@@ -117,9 +117,6 @@ onUnmounted(() => {
 
 <style scoped>
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: var(--color-background-light);
     padding: 1rem 0;
@@ -296,7 +293,6 @@ onUnmounted(() => {
 }
 
 .header__mobile-nav {
-    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
