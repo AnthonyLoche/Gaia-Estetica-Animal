@@ -51,13 +51,13 @@ onUnmounted(() => {
                             </router-link>
                         </li>
                         <li class="header__nav-item">
-                            <router-link to="/about" class="header__nav-link" active-class="header__nav-link--active"
+                            <router-link to="/services" class="header__nav-link" active-class="header__nav-link--active"
                                 @click="closeMobileMenu">
                                 Serviços
                             </router-link>
                         </li>
                         <li class="header__nav-item">
-                            <router-link to="/services" class="header__nav-link" active-class="header__nav-link--active"
+                            <router-link to="/about-us" class="header__nav-link" active-class="header__nav-link--active"
                                 @click="closeMobileMenu">
                                 Sobre Nós
                             </router-link>

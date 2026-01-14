@@ -64,7 +64,6 @@ import Phone from "vue-material-design-icons/Phone.vue";
 import Instagram from "vue-material-design-icons/Instagram.vue";
 import Clock from "vue-material-design-icons/Clock.vue";
 import MapMarker from "vue-material-design-icons/MapMarker.vue";
-import router from "@/router";
 </script>
 
 <style scoped>
