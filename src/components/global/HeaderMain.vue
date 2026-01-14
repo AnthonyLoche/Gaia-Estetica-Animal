@@ -19,6 +19,10 @@ const handleScroll = () => {
     isScrolled.value = window.scrollY > 10;
 };
 
+const handleWhatsapp = () => {
+    window.open("https://wa.me/554796180343", "_blank");
+};
+
 onMounted(() => {
     window.addEventListener("scroll", handleScroll);
 });
@@ -67,7 +71,7 @@ onUnmounted(() => {
                     </ul>
                 </nav>
 
-                <button class="header__cta" aria-label="Agendar atendimento">
+                <button class="header__cta" aria-label="Agendar atendimento" @click="handleWhatsapp()">
                     <CalendarMonth class="header__cta-icon" :size="20" />
                     <span class="header__cta-text">Agendar Atendimento</span>
                 </button>
@@ -390,7 +394,7 @@ onUnmounted(() => {
     .header__desktop-content {
         gap: 2rem;
     }
-    
+
     .header__nav-list {
         gap: 1.5rem;
     }

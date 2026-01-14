@@ -2,6 +2,10 @@
 import PawIcon from "vue-material-design-icons/Paw.vue";
 import WhatsAppIcon from "vue-material-design-icons/Whatsapp.vue";
 import DogService from "vue-material-design-icons/DogService.vue";
+
+const handleContact = (url) => {
+    window.open(url, "_blank");
+};
 </script>
 
 <template>
@@ -24,7 +28,7 @@ import DogService from "vue-material-design-icons/DogService.vue";
             <div class="subtitle">Proporcionamos um atendimento humanizado e carinhoso cuidadndo da estética e saúde do
                 seu melhor amigo com os melhores produtos do mercado</div>
             <div class="buttons">
-                <button class="header__cta" aria-label="Agendar atendimento">
+                <button class="header__cta" aria-label="Agendar atendimento" @click="handleContact('https://wa.me/554796180343')">
                     <WhatsAppIcon class="header__cta-icon" :size="20" />
                     <span class="header__cta-text">Agendar Atendimento</span>
                 </button>
@@ -167,7 +171,7 @@ img.circle {
 }
 
 .subtitle {
-    color: #c1c1c1;
+    color: #555555;
     font-size: 1.25rem;
     width: 80%;
 }
