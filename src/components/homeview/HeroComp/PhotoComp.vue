@@ -1,33 +1,52 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { dogPhotos } from '@/data/images';
 
-const images = ref([
-  'https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80'
-]);
 
+const images = ref([]);
 const currentIndex = ref(0);
 const isTransitioning = ref(false);
+
 let intervalId = null;
 
 const intervalTime = 5000;
 const transitionDuration = 1000;
 
+/* Embaralha o array (Fisher-Yates) */
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+/* Seleciona 6 imagens aleatórias */
+const selectRandomImages = () => {
+  images.value = shuffleArray(dogPhotos).slice(0, 6);
+};
+
 const nextImage = () => {
   if (isTransitioning.value) return;
+
   isTransitioning.value = true;
   currentIndex.value = (currentIndex.value + 1) % images.value.length;
-  setTimeout(() => (isTransitioning.value = false), transitionDuration);
+
+  setTimeout(() => {
+    isTransitioning.value = false;
+  }, transitionDuration);
 };
 
 const goToImage = (index) => {
   if (isTransitioning.value || index === currentIndex.value) return;
+
   isTransitioning.value = true;
   currentIndex.value = index;
-  setTimeout(() => (isTransitioning.value = false), transitionDuration);
+
+  setTimeout(() => {
+    isTransitioning.value = false;
+  }, transitionDuration);
 };
 
 const startAutoPlay = () => {
@@ -42,9 +61,14 @@ const stopAutoPlay = () => {
   }
 };
 
-onMounted(startAutoPlay);
+onMounted(() => {
+  selectRandomImages(); // Escolhe 6 novas imagens
+  startAutoPlay();
+});
+
 onUnmounted(stopAutoPlay);
 </script>
+
 
 <template>
   <article

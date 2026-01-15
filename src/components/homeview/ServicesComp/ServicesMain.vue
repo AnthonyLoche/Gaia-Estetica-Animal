@@ -30,22 +30,11 @@ const services = [
     id: 3,
     image: 'https://res.cloudinary.com/goengineco/image/upload/f_auto,q_auto,c_limit,w_750,fl_lossy/v1/pet-club/strapi-images/cuidado_canino_consejos_y_beneficios_de_llevar_a_tu_perro_a_la_estetica_ac9f63eb76',
     title: 'Estética',
-    description: 'Procedimentos especializadpos para manter a beleza e padrão da raça.',
+    description: 'Procedimentos especializados para manter a beleza e padrão da raça.',
     features: [
-        'Hand Stripping',
+        'Tosas da Raça',
         'Tosa Baby',
         'Penteados Criativos',
-    ]
-  },
-  {
-    id: 4,
-    image: 'https://www.petqueroquero.com.br/wp-content/uploads/2018/10/spa.png',
-    title: 'Spa do Pet',
-    description: 'Momentos de relaxamento total com massagens e cromoterapia',
-    features: [
-        'Banho de Ofurô',
-        'Aromaterapia',
-        'Massagem Relaxante',
     ]
   }
 ];
@@ -101,8 +90,8 @@ const services = [
 }
 
 .services__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 100%;
+  display: flex;
   gap: 2.5rem;
   padding: 0 1rem;
 }
@@ -115,7 +104,7 @@ const services = [
   }
   
   .services__cards {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2rem;
     padding: 0 0.5rem;
   }

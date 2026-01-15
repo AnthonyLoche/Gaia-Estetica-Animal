@@ -12,5 +12,8 @@ import EssenceSection from "./about/EssenceSection.vue";
 import QuoteSection from "./about/QuoteSection.vue";
 import GallerySection from "./about/GallerySection.vue";
 import FeaturesSection from "./about/FeaturesSection.vue";
+import HoursAndSocial from "./contact/HoursAndSocial.vue";
+import ContactForm from "./contact/ContactForm.vue";
+import LocationMap from "./contact/LocationMap.vue";
 
-export { HeaderMain, HeroMain, StacksSection, FooterMain, ServicesMain, TicketComp, LocationComp, ServicesSection, RewardSection, HeroAbout, EssenceSection, QuoteSection, GallerySection, FeaturesSection };
+export { HeaderMain, HeroMain, StacksSection, FooterMain, ServicesMain, TicketComp, LocationComp, ServicesSection, RewardSection, HeroAbout, EssenceSection, QuoteSection, GallerySection, FeaturesSection, HoursAndSocial, ContactForm, LocationMap };

@@ -34,24 +34,28 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
+                <!-- Business Hours -->
                 <div class="footer-section">
-                    <h3 class="section-title">Newsletter</h3>
-                    <p class="newsletter-text">
-                        Receba dicas de cuidados e promoções exclusivas.
+                    <h3 class="section-title">Horário de Atendimento</h3>
+
+                    <p class="hours-text">
+                        <strong>Terça a Sexta</strong><br />
+                        08:00 às 12:00<br />
+                        13:30 às 18:00
                     </p>
-                    <div class="newsletter-form">
-                        <input v-model="email" type="email" placeholder="Seu e-mail" class="email-input" required />
-                        <button @click="handleSubmit" class="submit-btn">▶</button>
-                    </div>
+
+                    <p class="hours-text">
+                        <strong>Sábados</strong><br />
+                        08:00 às 13:00
+                    </p>
                 </div>
             </div>
 
             <!-- Copyright -->
             <div class="footer-bottom">
                 <p class="copyright">
-                    © 2024 Gaia Estética Animal. Todos os direitos reservados. Feito com <span class="heart">❤</span>
-                    para o seu pet
+                    © 2024 Gaia Estética Animal. Todos os direitos reservados.
+                    Feito com <span class="heart">❤</span> para o seu pet
                 </p>
             </div>
         </footer>
@@ -59,16 +63,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-const email = ref('');
-
-const handleSubmit = () => {
-    if (email.value) {
-        alert(`Email cadastrado: ${email.value}`);
-        email.value = '';
-    }
-};
 </script>
 
 <style scoped>
@@ -149,47 +143,11 @@ const handleSubmit = () => {
     color: #fff;
 }
 
-.newsletter-text {
+.hours-text {
     font-size: 14px;
     color: #e0e0e0;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 8px;
-}
-
-.email-input {
-    flex: 1;
-    padding: 12px 16px;
-    border: none;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 14px;
-    outline: none;
-}
-
-.email-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.submit-btn {
-    padding: 12px 20px;
-    background: #e8a5c0;
-    border: none;
-    border-radius: 6px;
-    color: #2d5550;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background: #f0b5d0;
+    line-height: 1.6;
+    margin-bottom: 16px;
 }
 
 .footer-bottom {

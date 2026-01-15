@@ -60,6 +60,7 @@ import HandHeartOutline from 'vue-material-design-icons/HandHeartOutline.vue';
 .item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     flex: 1;
 }

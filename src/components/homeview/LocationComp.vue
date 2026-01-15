@@ -21,7 +21,7 @@
                     </div>
                     <div class="info-content">
                         <h3 class="info-title">Horário de Funcionamento</h3>
-                        <p class="info-text">Segunda a Sexta: 08:00 às 18:00</p>
+                        <p class="info-text">Terça a Sexta: 08:00 ás 12:00 e 13:30 às 18:00</p>
                         <p class="info-text">Sábado: 08:00 às 13:00</p>
                     </div>
                 </div>

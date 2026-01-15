@@ -1,45 +1,6 @@
 <script setup>
 import CardServiceSection from './CardServiceSection.vue';
-
-import Dog from 'vue-material-design-icons/Dog.vue';
-import ContentCut from 'vue-material-design-icons/ContentCut.vue';
-import Shimmer from 'vue-material-design-icons/Shimmer.vue';
-import Car from 'vue-material-design-icons/Car.vue';
-
-const services = [
-  {
-    title: 'Banho',
-    description:
-      'Limpeza completa com shampoos específicos para cada tipo de pelo.',
-    linkText: 'SAIBA MAIS',
-    variant: 'pink',
-    icon: Dog
-  },
-  {
-    title: 'Tosa',
-    description:
-      'Tosa higiênica na máquina ou tesoura, respeitando o padrão da raça.',
-    linkText: 'SAIBA MAIS',
-    variant: 'green',
-    icon: ContentCut
-  },
-  {
-    title: 'Estética Animal',
-    description:
-      'Hidratação profunda, reconstrução de pelos e cuidados especiais.',
-    linkText: 'SAIBA MAIS',
-    variant: 'pink',
-    icon: Shimmer
-  },
-  {
-    title: 'Serviço de Táxi',
-    description:
-      'Buscamos e levamos seu pet com segurança e conforto.',
-    linkText: 'CONSULTAR TAXA',
-    variant: 'dark-green',
-    icon: Car
-  }
-];
+import { services } from '@/data/services';
 </script>
 
 <template>
@@ -53,18 +14,14 @@ const services = [
       </p>
 
       <div class="services-grid">
-        <CardServiceSection
-          v-for="service in services"
-          :key="service.title"
-          :title="service.title"
-          :description="service.description"
-          :link-text="service.linkText"
-          :variant="service.variant"
-        >
+        <CardServiceSection v-for="service in services" :key="service.title" :title="service.title"
+          :description="service.description" :link-text="service.linkText" :variant="service.variant"
+          :whatsapp-message="service.whatsappMessage">
           <template #icon>
             <component :is="service.icon" />
           </template>
         </CardServiceSection>
+
       </div>
     </div>
   </section>

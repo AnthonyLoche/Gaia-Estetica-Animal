@@ -10,14 +10,22 @@
       {{ description }}
     </p>
 
-    <a :href="link" class="service-link">
+    <a
+      :href="whatsappLink"
+      class="service-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {{ linkText }} →
     </a>
   </div>
 </template>
 
+
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -26,10 +34,6 @@ defineProps({
     type: String,
     required: true
   },
-  link: {
-    type: String,
-    default: '#'
-  },
   linkText: {
     type: String,
     default: 'SAIBA MAIS'
@@ -37,7 +41,19 @@ defineProps({
   variant: {
     type: String,
     default: 'pink'
+  },
+  whatsappMessage: {
+    type: String,
+    required: true
   }
+});
+
+// 👉 coloque o número do WhatsApp aqui
+const WHATSAPP_NUMBER = '5547999999999';
+
+const whatsappLink = computed(() => {
+  const message = encodeURIComponent(props.whatsappMessage);
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 });
 </script>
 

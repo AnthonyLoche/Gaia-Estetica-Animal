@@ -22,7 +22,6 @@ const props = defineProps({
     }
 });
 
-// Computed para garantir que features seja um array
 const safeFeatures = computed(() => {
     return Array.isArray(props.features) ? props.features : [];
 });

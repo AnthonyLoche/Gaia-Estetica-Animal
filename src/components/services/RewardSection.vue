@@ -16,10 +16,10 @@
         </p>
         
         <div class="hero-buttons">
-         <button class="header__cta" aria-label="Agendar atendimento" @click="handleContact('https://wa.me/554796180343')">
-                    <WhatsAppIcon class="header__cta-icon" :size="20" />
-                    <span class="header__cta-text">Agendar Atendimento</span>
-                </button>
+          <button class="header__cta" aria-label="Agendar atendimento" @click="handleWhatsAppContact">
+            <WhatsAppIcon class="header__cta-icon" :size="20" />
+            <span class="header__cta-text">Agendar Atendimento</span>
+          </button>
         </div>
         
         <div class="hero-features">
@@ -54,6 +54,33 @@
 import Paw from 'vue-material-design-icons/Paw.vue';
 import WhatsAppIcon from 'vue-material-design-icons/Whatsapp.vue';
 import CheckCircle from 'vue-material-design-icons/CheckCircle.vue';
+
+const getTimeBasedGreeting = () => {
+  const hour = new Date().getHours();
+  
+  if (hour >= 5 && hour < 12) {
+    return 'Bom dia';
+  } else if (hour >= 12 && hour < 18) {
+    return 'Boa tarde';
+  } else {
+    return 'Boa noite';
+  }
+};
+
+const generateWhatsAppMessage = () => {
+  const greeting = getTimeBasedGreeting();
+  const message = `${greeting}, gostaria de agendar um horário pro meu pet`;
+  return encodeURIComponent(message);
+};
+
+const handleWhatsAppContact = () => {
+  const phoneNumber = '554796180343'; 
+  const message = generateWhatsAppMessage();
+  
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  
+  window.open(whatsappUrl, '_blank');
+};
 </script>
 
 <style scoped>
