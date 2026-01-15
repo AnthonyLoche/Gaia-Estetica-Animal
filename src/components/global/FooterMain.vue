@@ -2,35 +2,45 @@
     <div class="page-wrapper">
         <footer class="footer">
             <div class="footer-content">
+                
                 <!-- Brand Section -->
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="../../assets/images/LogoGaia.png" alt="">
-                        Gaia Estética Animal
+                        <img src="../../assets/images/LogoGaia.png" alt="Gaia Estética Animal">
+                        <span>Gaia Estética Animal</span>
                     </div>
+
                     <p class="brand-text">
-                        Ofereça seu pet à família. Atendimento profissional com amor e dedicação em cada detalhe.
+                        Ofereça seu pet à família. Atendimento profissional com amor
+                        e dedicação em cada detalhe.
                     </p>
                 </div>
 
                 <!-- Navigation -->
                 <div class="footer-section">
                     <h3 class="section-title">Navegação</h3>
-                    <ul class="link-list">
-                        <li><a href="#" class="footer-link">Início</a></li>
-                        <li><a href="#" class="footer-link">Serviços</a></li>
-                        <li><a href="#" class="footer-link">Sobre</a></li>
-                        <li><a href="#" class="footer-link">Contato</a></li>
-                    </ul>
-                </div>
 
-                <!-- Policies -->
-                <div class="footer-section">
-                    <h3 class="section-title">Políticas</h3>
                     <ul class="link-list">
-                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
-                        <li><a href="#" class="footer-link">Privacidade</a></li>
-                        <li><a href="#" class="footer-link">Cuidados Pós-Banho</a></li>
+                        <li>
+                            <RouterLink to="/" class="footer-link">
+                                Início
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/services" class="footer-link">
+                                Serviços
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/about-us" class="footer-link">
+                                Sobre nós
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/contact" class="footer-link">
+                                Contato
+                            </RouterLink>
+                        </li>
                     </ul>
                 </div>
 
@@ -54,8 +64,16 @@
             <!-- Copyright -->
             <div class="footer-bottom">
                 <p class="copyright">
-                    © 2024 Gaia Estética Animal. Todos os direitos reservados.
-                    Feito com <span class="heart">❤</span> para o seu pet
+                    © 2024 Gaia Estética Animal. Todos os direitos reservados. <br />
+                    Feito e Desenvolvido por
+                    <a
+                        href="https://my-portfolio-anthonygabriel.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="developer-link"
+                    >
+                        Anthony Gabriel
+                    </a>
                 </p>
             </div>
         </footer>
@@ -63,6 +81,7 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped>
@@ -71,12 +90,11 @@
     color: white;
     padding: 60px 40px 30px;
     width: 100%;
-    margin: 0 auto;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
     gap: 60px;
     margin-bottom: 50px;
     width: 90%;
@@ -89,17 +107,15 @@
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 20px;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     border-radius: 50%;
 }
@@ -136,11 +152,11 @@
     color: #e0e0e0;
     text-decoration: none;
     font-size: 14px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 .hours-text {
@@ -161,10 +177,20 @@
 .copyright {
     font-size: 13px;
     color: #b0b0b0;
+    line-height: 1.6;
 }
 
-.heart {
-    color: #ff6b6b;
+.developer-link {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.developer-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 /* Responsive */

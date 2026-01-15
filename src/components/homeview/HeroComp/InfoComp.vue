@@ -2,6 +2,7 @@
 import PawIcon from "vue-material-design-icons/Paw.vue";
 import WhatsAppIcon from "vue-material-design-icons/Whatsapp.vue";
 import DogService from "vue-material-design-icons/DogService.vue";
+import router from "@/router";
 
 const handleContact = (url) => {
     window.open(url, "_blank");
@@ -32,7 +33,7 @@ const handleContact = (url) => {
                     <WhatsAppIcon class="header__cta-icon" :size="20" />
                     <span class="header__cta-text">Agendar Atendimento</span>
                 </button>
-                <button class="header__blank-cta" aria-label="Agendar atendimento">
+                <button class="header__blank-cta" aria-label="Agendar atendimento" @click="router.push('/services')">
                     <DogService class="header__cta-icon" :size="20" />
                     <span class="header__cta-text">Conhecer Serviços</span>
                 </button>
@@ -40,9 +41,9 @@ const handleContact = (url) => {
             <div class="plus">
                 <div>
                     
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="" class="circle">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="" class="circle">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="" class="circle">
+                <img src="https://images.pexels.com/photos/128817/pexels-photo-128817.jpeg" alt="" class="circle">
+                <img src="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg" alt="" class="circle">
+                <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg" alt="" class="circle">
                 
                 </div>
                 <p style="margin-left: 1rem;">+Mais de <strong>500 pets</strong> atendidos</p>
@@ -63,8 +64,8 @@ span {
 }
 
 img.circle {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: var(--color-accent);  
     margin-right: -10px;

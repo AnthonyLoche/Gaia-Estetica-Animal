@@ -1,28 +1,35 @@
-import Dog from 'vue-material-design-icons/Dog.vue';
-import ContentCut from 'vue-material-design-icons/ContentCut.vue';
-import Shimmer from 'vue-material-design-icons/Shimmer.vue';
-import Car from 'vue-material-design-icons/Car.vue';
+import Dog from 'vue-material-design-icons/Dog.vue'
+import ContentCut from 'vue-material-design-icons/ContentCut.vue'
+import Shimmer from 'vue-material-design-icons/Shimmer.vue'
+import Car from 'vue-material-design-icons/Car.vue'
+import Shower from 'vue-material-design-icons/Shower.vue'
+import Tooth from 'vue-material-design-icons/Tooth.vue'
+import Palette from 'vue-material-design-icons/Palette.vue'
+import HairDryer from 'vue-material-design-icons/HairDryer.vue'
+import CreditCardOutline from 'vue-material-design-icons/CreditCardOutline.vue'
+import InvertColors from 'vue-material-design-icons/InvertColors.vue'
+import PawOutline from 'vue-material-design-icons/PawOutline.vue'
 
 export const services = [
   {
     title: 'Banho - Porte Pequeno',
-    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Ideal para pets até 5kg.',
+    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Ideal para pets até 5kg. A partir de R$65',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Dog,
+    icon: Shower,
     whatsappMessage: 'Olá! Gostaria de saber mais sobre o serviço de Banho para pets de porte pequeno'
   },
   {
     title: 'Banho - Porte Grande',
-    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Ideal para pets acima de 15kg.',
+    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Ideal para pets acima de 15kg. A partir de R$65',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Dog,
+    icon: Shower,
     whatsappMessage: 'Olá! Gostaria de saber mais sobre o serviço de Banho para pets de porte grande'
   },
   {
     title: 'Tosa na Máquina',
-    description: 'Tosa técnica realizada com máquina profissional, proporcionando corte uniforme e seguro.',
+    description: 'Tosa técnica realizada com máquina profissional, proporcionando corte uniforme e seguro. A partir de R$100',
     linkText: 'SAIBA MAIS',
     variant: 'green',
     icon: ContentCut,
@@ -30,7 +37,7 @@ export const services = [
   },
   {
     title: 'Tosa na Tesoura',
-    description: 'Tosa artesanal com tesouras profissionais para um acabamento mais natural e detalhado.',
+    description: 'Tosa artesanal com tesouras profissionais para um acabamento mais natural e detalhado. A partir de R$100',
     linkText: 'SAIBA MAIS',
     variant: 'green',
     icon: ContentCut,
@@ -41,7 +48,7 @@ export const services = [
     description: 'Tosa especial para filhotes, com técnicas suaves para primeira experiência positiva do pet.',
     linkText: 'SAIBA MAIS',
     variant: 'green',
-    icon: ContentCut,
+    icon: Dog,
     whatsappMessage: 'Oi! Meu pet é filhote e gostaria de informações sobre a Tosa Bebê'
   },
   {
@@ -57,7 +64,7 @@ export const services = [
     description: 'Limpeza e corte nas áreas íntimas, patas, rosto e ouvidos para melhor higiene do pet.',
     linkText: 'SAIBA MAIS',
     variant: 'green',
-    icon: ContentCut,
+    icon: Shower,
     whatsappMessage: 'Oi! Gostaria de informações sobre a Tosa Higiênica'
   },
   {
@@ -65,7 +72,7 @@ export const services = [
     description: 'Limpeza dentária com produtos veterinários específicos para saúde bucal do pet.',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Shimmer,
+    icon: Tooth,
     whatsappMessage: 'Olá! Gostaria de saber mais sobre o serviço de Escovação de Dentes para pets'
   },
   {
@@ -73,7 +80,7 @@ export const services = [
     description: 'Hidratação profunda, reconstrução de pelos e cuidados especiais para fios danificados.',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Shimmer,
+    icon: HairDryer,
     whatsappMessage: 'Oi! Quero informações sobre o Tratamento de Pelagem'
   },
   {
@@ -89,7 +96,7 @@ export const services = [
     description: 'Corte seguro e preciso das unhas, evitando desconforto e problemas posturais.',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Shimmer,
+    icon: PawOutline,
     whatsappMessage: 'Oi! Gostaria de informações sobre o Corte de Unhas'
   },
   {
@@ -97,7 +104,7 @@ export const services = [
     description: 'Estilos e penteados criativos para ocasiões especiais e concursos.',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Shimmer,
+    icon: Palette,
     whatsappMessage: 'Olá! Quero saber mais sobre Penteados Especiais para pets'
   },
   {
@@ -105,7 +112,7 @@ export const services = [
     description: 'Técnicas de coloração seguras e específicas para pets com produtos atóxicos.',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
-    icon: Shimmer,
+    icon: InvertColors,
     whatsappMessage: 'Oi! Tenho interesse em Colorimetria Canina e gostaria de mais detalhes'
   },
   {
@@ -121,7 +128,7 @@ export const services = [
     description: 'Serviços regulares com agendamento fixo e preço especial para cuidados mensais.',
     linkText: 'CONSULTAR PACOTE',
     variant: 'dark-green',
-    icon: Car,
+    icon: CreditCardOutline,
     whatsappMessage: 'Oi! Gostaria de consultar os valores dos pacotes mensais e quinzenais'
   },
   {
@@ -132,4 +139,4 @@ export const services = [
     icon: Car,
     whatsappMessage: 'Olá! Gostaria de informações sobre o serviço de Táxi Pet'
   }
-];
+]

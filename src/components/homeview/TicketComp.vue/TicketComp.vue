@@ -1,147 +1,181 @@
 <template>
   <div class="page-wrapper">
-    <div class="promo-banner">
+    <section class="experience-banner">
+      
+      <span class="badge">
+        <Paw width="18" height="18" />
+        Cuidado premium
+      </span>
+
       <h2 class="title">
-        Primeira vez na Gaia? 
-        <span class="paw-prints">
-            <Paw width="32" height="32" />
-            <Paw width="32" height="32" />
-            <Paw width="32" height="32" />
-        </span>
+        Um novo jeito de cuidar<br />
+        <span>de quem você ama</span>
       </h2>
-      
+
       <p class="description">
-        Ganhe <span class="highlight">15% de desconto</span> no primeiro banho e hidratação do seu pet.<br>
-        Venha fazer parte da nossa família!
+        Na <strong>Gaia</strong>, cada banho é um momento de calma,
+        carinho e bem-estar.<br />
+        Seu pet merece mais do que um serviço — merece uma experiência.
       </p>
-      
-      <button class="cta-button" @click="handleCoupon">
-        Garantir meu cupom
-      </button>
-    </div>
+
+      <div class="actions">
+        <button class="primary" @click="handleContact('https://wa.me/554796180343')">
+          Agendar um horário
+        </button>
+
+      </div>
+
+    </section>
   </div>
 </template>
 
 <script setup>
-    import Paw from 'vue-material-design-icons/Paw.vue';
-const handleCoupon = () => {
-  alert('Cupom de 15% garantido! Entre em contato para agendar.');
+import Paw from 'vue-material-design-icons/Paw.vue'
+
+const handleContact = (url) => {
+    window.open(url, "_blank");
 };
 </script>
 
 <style scoped>
+/* ===============================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===============================
+   WRAPPER
+================================ */
 .page-wrapper {
-  min-height: 40vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 0;
 }
 
-.promo-banner {
-  background: linear-gradient(135deg, #2d5550 0%, #3d6b64 100%);
-  border-radius: 24px;
-  padding: 60px 40px;
+/* ===============================
+   BANNER
+================================ */
+.experience-banner {
+  background: linear-gradient(135deg, #1f3d38 0%, #2d5550 100%);
+  border-radius: 28px;
+  padding: 64px 48px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
+/* ===============================
+   BADGE
+================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ===============================
+   TITLE
+================================ */
 .title {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  line-height: 1.15;
   margin-bottom: 24px;
-  line-height: 1.2;
+}
+
+.title span {
+  color: #a8e6cf;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #e6f2ef;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+.actions {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.paw-prints {
-  font-size: 32px;
-  display: inline-block;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.description {
-  font-size: 16px;
-  color: #e8f0ef;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-.highlight {
-  color: #ffd700;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.cta-button {
-  background: white;
-  color: #2d5550;
+button {
   border: none;
-  border-radius: 12px;
-  padding: 16px 40px;
-  font-size: 16px;
+  border-radius: 14px;
+  padding: 16px 36px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.cta-button:hover {
+/* Primary */
+.primary {
+  background: white;
+  color: #2d5550;
+}
+
+.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  background: #f8f8f8;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.cta-button:active {
-  transform: translateY(0);
+/* Secondary */
+.secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive */
-@media (max-width: 640px) {
-  .promo-banner {
-    padding: 40px 24px;
-    border-radius: 16px;
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .experience-banner {
+    padding: 48px 28px;
+    border-radius: 20px;
   }
-  
+
   .title {
-    font-size: 28px;
+    font-size: 2.2rem;
   }
-  
-  .paw-prints {
-    font-size: 26px;
-  }
-  
+
   .description {
-    font-size: 14px;
-  }
-  
-  .highlight {
-    font-size: 16px;
-  }
-  
-  .cta-button {
-    padding: 14px 32px;
     font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.9rem;
+  }
+
+  button {
+    width: 100%;
   }
 }
 </style>
