@@ -202,14 +202,13 @@ onUnmounted(stopAutoPlay);
   background: var(--color-secondary);
 }
 
-/* MOBILE */
 @media (max-width: 1024px) {
   .carousel {
-    min-height: 350px;
+    min-height: 450px;
   }
 
   .carousel__image {
-    min-height: 300px;
+    min-height: 400px;
     transform: rotate(3deg);
   }
 }

@@ -62,8 +62,8 @@ import { services } from '@/data/services';
 }
 
 @media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -72,8 +72,6 @@ import { services } from '@/data/services';
     font-size: 32px;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+
 }
 </style>

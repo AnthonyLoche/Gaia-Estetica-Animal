@@ -26,7 +26,7 @@ const handleContact = (url) => {
             </div>
         </div>
         <div class="desc">
-            <div class="subtitle">Proporcionamos um atendimento humanizado e carinhoso cuidadndo da estética e saúde do
+            <div class="subtitle">Proporcionamos um atendimento humanizado e carinhoso cuidando da estética e saúde do
                 seu melhor amigo com os melhores produtos do mercado</div>
             <div class="buttons">
                 <button class="header__cta" aria-label="Agendar atendimento" @click="handleContact('https://wa.me/554796180343')">
@@ -135,30 +135,59 @@ img.circle {
 .header__blank-cta {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.75rem;
-    border-radius: 50px;
-    border: 0;
-    background-color: #c1c1c1;
-    color: white;
+    gap: 0.6rem;
+
+    padding: 0.9rem 2rem;
+    border-radius: 999px;
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #F4A7B9 0%,
+        #f28aa3 100%
+    );
+
+    color: #ffffff;
     font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 0.95rem;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+
     cursor: pointer;
-    transition: all 0.3s ease;
     white-space: nowrap;
     flex-shrink: 0;
+
+    box-shadow:
+        0 8px 20px rgba(244, 167, 185, 0.45),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease-in-out,
+        box-shadow 0.25s ease-in-out,
+        background 0.25s ease-in-out;
 }
 
 .header__blank-cta:hover {
-    background-color: #8a8585;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(31, 77, 63, 0.2);
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #f28aa3 0%,
+        #F4A7B9 100%
+    );
+
+    box-shadow:
+        0 12px 28px rgba(244, 167, 185, 0.6),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .header__blank-cta:active {
     transform: translateY(0);
+    box-shadow:
+        0 6px 14px rgba(244, 167, 185, 0.4),
+        inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
 
 .buttons {
     display: flex;

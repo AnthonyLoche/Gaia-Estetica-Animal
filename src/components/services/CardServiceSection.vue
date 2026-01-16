@@ -66,7 +66,7 @@ const whatsappLink = computed(() => {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;;
 }
 
 .service-card:hover {

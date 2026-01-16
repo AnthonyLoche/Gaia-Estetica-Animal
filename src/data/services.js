@@ -19,9 +19,17 @@ export const services = [
     icon: Shower,
     whatsappMessage: 'Olá! Gostaria de saber mais sobre o serviço de Banho para pets de porte pequeno'
   },
+   {
+    title: 'Banho - Porte Médio',
+    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Ideal para pets até 10kg. A partir de R$85',
+    linkText: 'SAIBA MAIS',
+    variant: 'pink',
+    icon: Shower,
+    whatsappMessage: 'Olá! Gostaria de saber mais sobre o serviço de Banho para pets de porte médio, por favor'
+  },
   {
     title: 'Banho - Porte Grande',
-    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Ideal para pets acima de 15kg. A partir de R$65',
+    description: 'Limpeza completa com shampoos específicos para cada tipo de pelo. Para pets acima de 20kg. A partir de R$150',
     linkText: 'SAIBA MAIS',
     variant: 'pink',
     icon: Shower,
@@ -37,7 +45,7 @@ export const services = [
   },
   {
     title: 'Tosa na Tesoura',
-    description: 'Tosa artesanal com tesouras profissionais para um acabamento mais natural e detalhado. A partir de R$100',
+    description: 'Tosa artesanal com tesouras profissionais para um acabamento mais natural e detalhado. A partir de R$150',
     linkText: 'SAIBA MAIS',
     variant: 'green',
     icon: ContentCut,
@@ -45,7 +53,7 @@ export const services = [
   },
   {
     title: 'Tosa Bebê',
-    description: 'Tosa especial para filhotes, com técnicas suaves para primeira experiência positiva do pet.',
+    description: 'Tosa especial para filhotes, com técnicas suaves para primeira experiência positiva do pet. A partir de R$130',
     linkText: 'SAIBA MAIS',
     variant: 'green',
     icon: Dog,
@@ -53,7 +61,7 @@ export const services = [
   },
   {
     title: 'Tosa Específica da Raça',
-    description: 'Técnica especializada mantendo as características e padrões específicos de cada raça.',
+    description: 'Técnica especializada mantendo as características e padrões específicos de cada raça. A partir de R$150',
     linkText: 'SAIBA MAIS',
     variant: 'green',
     icon: ContentCut,
