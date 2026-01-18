@@ -7,12 +7,17 @@
   </url>
 
   <url>
-    <loc>https://gaia-estetica-animal.com.br/servicos</loc>
+    <loc>https://gaia-estetica-animal.com.br/services</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gaia-estetica-animal.com.br/contato</loc>
+    <loc>https://gaia-estetica-animal.com.br/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://gaia-estetica-animal.com.br/about-us</loc>
     <priority>0.8</priority>
   </url>
 
