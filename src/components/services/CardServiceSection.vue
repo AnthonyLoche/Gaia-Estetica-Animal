@@ -48,8 +48,7 @@ const props = defineProps({
   }
 });
 
-// 👉 coloque o número do WhatsApp aqui
-const WHATSAPP_NUMBER = '5547999999999';
+const WHATSAPP_NUMBER = '5547996180343';
 
 const whatsappLink = computed(() => {
   const message = encodeURIComponent(props.whatsappMessage);
