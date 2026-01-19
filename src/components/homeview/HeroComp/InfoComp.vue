@@ -2,6 +2,7 @@
 import PawIcon from "vue-material-design-icons/Paw.vue";
 import WhatsAppIcon from "vue-material-design-icons/Whatsapp.vue";
 import DogService from "vue-material-design-icons/DogService.vue";
+import InstagramIcon from "vue-material-design-icons/Instagram.vue"; // Adicionado
 import CreditCardOutline from "vue-material-design-icons/CreditCardOutline.vue";
 import router from "@/router";
 
@@ -21,6 +22,11 @@ const packageInfo = {
 const handlePackageContact = () => {
     const message = encodeURIComponent(packageInfo.whatsappMessage);
     window.open(`https://wa.me/554796180343?text=${message}`, "_blank");
+};
+
+// Função para abrir Instagram
+const handleInstagram = () => {
+    window.open("https://www.instagram.com/gaiaesteticaanimal/", "_blank");
 };
 </script>
 
@@ -51,6 +57,11 @@ const handlePackageContact = () => {
                 <button class="header__blank-cta" aria-label="Conhecer serviços" @click="router.push('/services')">
                     <DogService class="header__cta-icon" :size="20" />
                     <span class="header__cta-text">Conhecer Serviços</span>
+                </button>
+                <!-- Botão do Instagram -->
+                <button class="header__instagram-cta" aria-label="Seguir no Instagram" @click="handleInstagram">
+                    <InstagramIcon class="header__cta-icon" :size="20" />
+                    <span class="header__cta-text">Seguir no Instagram</span>
                 </button>
             </div>
             
@@ -190,16 +201,114 @@ img.circle {
     animation: gradientMove 8s ease infinite, borderGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes gradientMove {
-    0%, 100% {
-        background-position: 0% 50%;
+/* BOTÃO DO INSTAGRAM */
+.header__instagram-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    border-radius: 999px;
+    border: none;
+    
+    background: linear-gradient(
+        135deg,
+        #405DE6 0%,
+        #5851DB 20%,
+        #833AB4 40%,
+        #C13584 60%,
+        #E1306C 80%,
+        #FD1D1D 100%
+    );
+    background-size: 400% 400%;
+    
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+
+/* Animação específica para o Instagram */
+@keyframes borderGlowInstagram {
+    0% {
+        box-shadow: 
+            0 0 10px rgba(64, 93, 230, 0.4),
+            0 0 20px rgba(131, 58, 180, 0.3),
+            0 0 30px rgba(193, 53, 132, 0.2),
+            inset 0 0 15px rgba(255, 255, 255, 0.1);
     }
-    50% {
-        background-position: 100% 50%;
+    100% {
+        box-shadow: 
+            0 0 15px rgba(64, 93, 230, 0.6),
+            0 0 25px rgba(131, 58, 180, 0.5),
+            0 0 35px rgba(193, 53, 132, 0.3),
+            inset 0 0 20px rgba(255, 255, 255, 0.2);
     }
 }
 
-/* Brilho na borda */
+/* Efeito de corrente/partículas na borda do Instagram */
+.header__instagram-cta::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 999px;
+    background: linear-gradient(
+        45deg,
+        #405DE6,
+        #5851DB,
+        #833AB4,
+        #C13584,
+        #E1306C,
+        #FD1D1D,
+        #405DE6
+    );
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(3px);
+    opacity: 0.8;
+}
+
+
+
+.header__instagram-cta:hover::after {
+    left: 100%;
+}
+
+.header__instagram-cta > * {
+    position: relative;
+    z-index: 2;
+}
+
+.header__instagram-cta:hover {
+    transform: translateY(-3px) scale(1.01);
+    animation: gradientMove 4s ease infinite, borderGlowInstagram 1.5s ease-in-out infinite alternate;
+}
+
+.header__instagram-cta:active {
+    transform: translateY(0) scale(1);
+    animation-play-state: paused;
+}
+
+    @keyframes gradientMove {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
 @keyframes borderGlow {
     0% {
         box-shadow: 
@@ -217,7 +326,6 @@ img.circle {
     }
 }
 
-/* Efeito de corrente/partículas na borda */
 .header__blank-cta::before {
     content: '';
     position: absolute;
@@ -255,7 +363,6 @@ img.circle {
     }
 }
 
-/* Efeito de brilho deslizante */
 .header__blank-cta::after {
     content: '';
     position: absolute;
@@ -277,14 +384,13 @@ img.circle {
     left: 100%;
 }
 
-/* Conteúdo do botão acima dos efeitos */
 .header__blank-cta > * {
     position: relative;
     z-index: 2;
 }
 
 .header__blank-cta:hover {
-    transform: translateY(-3px) scale(1.03);
+    transform: translateY(-3px) scale(1.01);
     animation: gradientMove 4s ease infinite, borderGlow 1.5s ease-in-out infinite alternate;
 }
 
@@ -315,7 +421,6 @@ img.circle {
     margin-bottom: 1.5rem;
 }
 
-/* ESTILOS PARA O CARD DO PACOTE */
 .package-card {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -446,6 +551,10 @@ img.circle {
     /* Ajustes para mobile */
     .header__blank-cta {
         animation: gradientMove 12s ease infinite, borderGlow 4s ease-in-out infinite alternate;
+    }
+    
+    .header__instagram-cta {
+        animation: gradientMove 12s ease infinite, borderGlowInstagram 4s ease-in-out infinite alternate;
     }
 }
 </style>
