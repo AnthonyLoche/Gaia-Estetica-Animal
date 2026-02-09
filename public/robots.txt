@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gaia-estetica-animal.com.br/sitemap.xml
